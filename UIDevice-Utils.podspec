@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-#s.description      = <<-DESC DESC
+s.description      = <<-DESC Category to easy distinguish devices, family platform device, or device inches. DESC
   s.homepage         = "https://github.com/giuseppenucifora/UIDevice-Utils"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
