@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "UIDevice-Utils"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Category on UIDevice to distinguish between platforms by Device Model, Device Family or Inches and provide human-readable device names e.g. 'iPhone 6S Plus'"
   s.description      = "Category to easy distinguish devices, family platform device, or device inches."
   s.homepage         = "https://github.com/giuseppenucifora/UIDevice-Utils"
