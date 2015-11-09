@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "UIDevice-Utils"
   s.version          = "0.1.0"
-  s.summary          = "Category on UIDevice to distinguish between platforms by Device Model, Device Family or Inches and provide human-readable device names e.g. \"iPhone 6S Plus\""
+  s.summary          = "Category on UIDevice to distinguish between platforms by Device Model, Device Family or Inches and provide human-readable device names e.g. 'iPhone 6S Plus'"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
