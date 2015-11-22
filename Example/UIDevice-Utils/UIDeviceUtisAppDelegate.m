@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Giuseppe Nucifora. All rights reserved.
 //
 
-#import "UIDevice-UtisAppDelegate.h"
+#import "UIDeviceUtisAppDelegate.h"
 
-@implementation UIDevice-UtisAppDelegate
+@implementation UIDeviceUtisAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

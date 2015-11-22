@@ -1,5 +1,5 @@
 //
-//  UIDevice-UtisViewController.h
+//  UIDeviceUtisAppDelegate.h
 //  UIDevice-Utils
 //
 //  Created by Giuseppe Nucifora on 11/09/2015.
@@ -8,6 +8,8 @@
 
 @import UIKit;
 
-@interface UIDevice-UtisViewController : UIViewController
+@interface UIDeviceUtisAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

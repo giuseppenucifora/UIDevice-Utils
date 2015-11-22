@@ -7,11 +7,11 @@
 //
 
 @import UIKit;
-#import "UIDevice-UtisAppDelegate.h"
+#import "UIDeviceUtisAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([UIDevice-UtisAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([UIDeviceUtisAppDelegate class]));
     }
 }

@@ -13,8 +13,8 @@
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
-		6003F59E195388D20070C39A /* UIDevice-UtisAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* UIDevice-UtisAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* UIDevice-UtisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* UIDevice-UtisViewController.m */; };
+		6003F59E195388D20070C39A /* UIDeviceUtisAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* UIDeviceUtisAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* UIDeviceUtisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* UIDeviceUtisViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -47,10 +47,10 @@
 		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6003F59B195388D20070C39A /* UIDevice-Utils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Utils-Prefix.pch"; sourceTree = "<group>"; };
-		6003F59C195388D20070C39A /* UIDevice-UtisAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice-UtisAppDelegate.h"; sourceTree = "<group>"; };
-		6003F59D195388D20070C39A /* UIDevice-UtisAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-UtisAppDelegate.m"; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* UIDevice-UtisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice-UtisViewController.h"; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* UIDevice-UtisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-UtisViewController.m"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* UIDeviceUtisAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDeviceUtisAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* UIDeviceUtisAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDeviceUtisAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* UIDeviceUtisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDeviceUtisViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* UIDeviceUtisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDeviceUtisViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* UIDevice-Utils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIDevice-Utils_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,11 +130,11 @@
 		6003F593195388D20070C39A /* Example for UIDevice-Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* UIDevice-UtisAppDelegate.h */,
-				6003F59D195388D20070C39A /* UIDevice-UtisAppDelegate.m */,
+				6003F59C195388D20070C39A /* UIDeviceUtisAppDelegate.h */,
+				6003F59D195388D20070C39A /* UIDeviceUtisAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* UIDevice-UtisViewController.h */,
-				6003F5A6195388D20070C39A /* UIDevice-UtisViewController.m */,
+				6003F5A5195388D20070C39A /* UIDeviceUtisViewController.h */,
+				6003F5A6195388D20070C39A /* UIDeviceUtisViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -244,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "UIDevice-Utis";
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Giuseppe Nucifora";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -390,8 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F59E195388D20070C39A /* UIDevice-UtisAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* UIDevice-UtisViewController.m in Sources */,
+				6003F59E195388D20070C39A /* UIDeviceUtisAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* UIDeviceUtisViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +452,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -516,6 +517,7 @@
 				GCC_PREFIX_HEADER = "UIDevice-Utils/UIDevice-Utils-Prefix.pch";
 				INFOPLIST_FILE = "UIDevice-Utils/UIDevice-Utils-Info.plist";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,6 +533,7 @@
 				GCC_PREFIX_HEADER = "UIDevice-Utils/UIDevice-Utils-Prefix.pch";
 				INFOPLIST_FILE = "UIDevice-Utils/UIDevice-Utils-Info.plist";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -553,6 +556,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIDevice-Utils_Example.app/UIDevice-Utils_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -572,6 +576,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIDevice-Utils_Example.app/UIDevice-Utils_Example";
 				WRAPPER_EXTENSION = xctest;
