@@ -171,6 +171,8 @@
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return UIDeviceGenerationModeliPadAir;
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return UIDeviceGenerationModeliPadAir2;
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return UIDeviceGenerationModeliPadAir2;
+    if ([modelIdentifier isEqualToString:@"iPad6,7"])      return UIDeviceGenerationModeliPadPro;
+    if ([modelIdentifier isEqualToString:@"iPad6,8"])      return UIDeviceGenerationModeliPadPro;
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
@@ -203,8 +205,14 @@
     
     if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
-        BOOL smallerScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
-        return (smallerScreen ? UIDeviceGenerationModeliPhoneSimulator : UIDeviceGenerationModeliPadSimulator);
+        BOOL iPhoneScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
+        BOOL iPadScreen = !iPhoneScreen;
+        if (iPadScreen) {
+            return UIDeviceGenerationModeliPadSimulator;
+        }
+        else {
+            return UIDeviceGenerationModeliPhoneSimulator;
+        }
     }
     return UIDeviceGenerationModelUnknown;
 }
@@ -249,6 +257,9 @@
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
+    
+    if ([modelIdentifier isEqualToString:@"iPad6,7"])      return @"iPad Pro (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad6,8"])      return @"iPad Pro (Cellular)";
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
@@ -335,6 +346,25 @@
         case UIDeviceGenerationModeliPadPro:{
             return UIDeviceModelInches129;
         }
+        case UIDeviceGenerationModeliPadSimulator:{
+            
+        }
+            break;
+        case UIDeviceGenerationModeliPhoneSimulator:{
+            CGRect screenRect = [[UIScreen mainScreen] bounds];
+            NSInteger screenWidth = (NSInteger)screenRect.size.width;
+            NSInteger screenHeight = (NSInteger)screenRect.size.height;
+            
+            switch (screenHeight) {
+                case 480:
+                    
+                    break;
+                case <#expression#>:
+                default:
+                    break;
+            }
+        }
+            break;
         default:
             break;
     }
