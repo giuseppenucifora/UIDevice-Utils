@@ -331,42 +331,62 @@
         case UIDeviceGenerationModeliPad4:
         case UIDeviceGenerationModeliPadAir:
         case UIDeviceGenerationModeliPadAir2:{
-            
             return UIDeviceModelInches97;
         }
             break;
         case UIDeviceGenerationModeliPadMini1:
         case UIDeviceGenerationModeliPadMini2:
         case UIDeviceGenerationModeliPadMini3:
-        case UIDeviceGenerationModeliPadMini4:
-        {
+        case UIDeviceGenerationModeliPadMini4:{
             return UIDeviceModelInches79;
         }
             break;
         case UIDeviceGenerationModeliPadPro:{
             return UIDeviceModelInches129;
-        }
-        case UIDeviceGenerationModeliPadSimulator:{
-            
-        }
             break;
+        }
+        case UIDeviceGenerationModeliPadSimulator:
         case UIDeviceGenerationModeliPhoneSimulator:{
             CGRect screenRect = [[UIScreen mainScreen] bounds];
-            NSInteger screenWidth = (NSInteger)screenRect.size.width;
-            NSInteger screenHeight = (NSInteger)screenRect.size.height;
+            NSInteger screenHeight = ((NSInteger)screenRect.size.height > (NSInteger)screenRect.size.width) ? (NSInteger)screenRect.size.height : (NSInteger)screenRect.size.width;
+            
             
             switch (screenHeight) {
-                case 480:
-                    
+                case 480:{
+                    return UIDeviceSimulatorModelInches35;
+                }
                     break;
-                case <#expression#>:
-                default:
+                case 568:{
+                    return UIDeviceSimulatorModelInches4;
                     break;
+                }
+                case 667:{
+                    return UIDeviceSimulatorModelInches47;
+                    break;
+                }
+                case 736:{
+                    return UIDeviceSimulatorModelInches55;
+                    break;
+                }
+                case 1024:{
+                    return UIDeviceModelInches97;
+                    break;
+                }
+                case 1366:{
+                    return UIDeviceSimulatorModelInches129;
+                    break;
+                }
+                default:{
+                    return UIDeviceModelInchesUnKnown;
+                    break;
+                }
             }
+            break;
         }
+        default: {
+            return UIDeviceModelInchesUnKnown;
             break;
-        default:
-            break;
+        }
     }
     return UIDeviceModelInchesUnKnown;
 }
