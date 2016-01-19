@@ -17,10 +17,6 @@ UIDevice-Utils is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "UIDevice-Utils" , :git => 'https://github.com/giuseppenucifora/UIDevice-Utils.git'
-
-or
-
 pod "UIDevice-Utils"
 ```
 
