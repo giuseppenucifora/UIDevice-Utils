@@ -73,6 +73,13 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelInches) {
     UIDeviceModelInches79,
     UIDeviceModelInches97,
     UIDeviceModelInches129,
+    UIDeviceSimulatorModelInches35 = UIDeviceModelInches35,
+    UIDeviceSimulatorModelInches4 = UIDeviceModelInches4,
+    UIDeviceSimulatorModelInches47 = UIDeviceModelInches47,
+    UIDeviceSimulatorModelInches55 = UIDeviceModelInches55,
+    UIDeviceSimulatorModelInches79 = UIDeviceModelInches79,
+    UIDeviceSimulatorModelInches97 = UIDeviceModelInches97,
+    UIDeviceSimulatorModelInches129 = UIDeviceModelInches129,
     UIDeviceModelInchesUnKnown
 };
 
