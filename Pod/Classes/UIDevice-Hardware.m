@@ -171,6 +171,8 @@
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return UIDeviceGenerationModeliPadAir;
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return UIDeviceGenerationModeliPadAir2;
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return UIDeviceGenerationModeliPadAir2;
+    if ([modelIdentifier isEqualToString:@"iPad6,7"])      return UIDeviceGenerationModeliPadPro;
+    if ([modelIdentifier isEqualToString:@"iPad6,8"])      return UIDeviceGenerationModeliPadPro;
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
@@ -203,8 +205,14 @@
     
     if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
-        BOOL smallerScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
-        return (smallerScreen ? UIDeviceGenerationModeliPhoneSimulator : UIDeviceGenerationModeliPadSimulator);
+        BOOL iPhoneScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
+        BOOL iPadScreen = !iPhoneScreen;
+        if (iPadScreen) {
+            return UIDeviceGenerationModeliPadSimulator;
+        }
+        else {
+            return UIDeviceGenerationModeliPhoneSimulator;
+        }
     }
     return UIDeviceGenerationModelUnknown;
 }
@@ -249,6 +257,9 @@
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
+    
+    if ([modelIdentifier isEqualToString:@"iPad6,7"])      return @"iPad Pro (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad6,8"])      return @"iPad Pro (Cellular)";
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
@@ -320,23 +331,62 @@
         case UIDeviceGenerationModeliPad4:
         case UIDeviceGenerationModeliPadAir:
         case UIDeviceGenerationModeliPadAir2:{
-            
             return UIDeviceModelInches97;
         }
             break;
         case UIDeviceGenerationModeliPadMini1:
         case UIDeviceGenerationModeliPadMini2:
         case UIDeviceGenerationModeliPadMini3:
-        case UIDeviceGenerationModeliPadMini4:
-        {
+        case UIDeviceGenerationModeliPadMini4:{
             return UIDeviceModelInches79;
         }
             break;
         case UIDeviceGenerationModeliPadPro:{
             return UIDeviceModelInches129;
-        }
-        default:
             break;
+        }
+        case UIDeviceGenerationModeliPadSimulator:
+        case UIDeviceGenerationModeliPhoneSimulator:{
+            CGRect screenRect = [[UIScreen mainScreen] bounds];
+            NSInteger screenHeight = ((NSInteger)screenRect.size.height > (NSInteger)screenRect.size.width) ? (NSInteger)screenRect.size.height : (NSInteger)screenRect.size.width;
+            
+            
+            switch (screenHeight) {
+                case 480:{
+                    return UIDeviceSimulatorModelInches35;
+                }
+                    break;
+                case 568:{
+                    return UIDeviceSimulatorModelInches4;
+                    break;
+                }
+                case 667:{
+                    return UIDeviceSimulatorModelInches47;
+                    break;
+                }
+                case 736:{
+                    return UIDeviceSimulatorModelInches55;
+                    break;
+                }
+                case 1024:{
+                    return UIDeviceModelInches97;
+                    break;
+                }
+                case 1366:{
+                    return UIDeviceSimulatorModelInches129;
+                    break;
+                }
+                default:{
+                    return UIDeviceModelInchesUnKnown;
+                    break;
+                }
+            }
+            break;
+        }
+        default: {
+            return UIDeviceModelInchesUnKnown;
+            break;
+        }
     }
     return UIDeviceModelInchesUnKnown;
 }
