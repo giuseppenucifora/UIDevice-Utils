@@ -16,7 +16,7 @@ install_framework()
     local source="$1"
   fi
 
-  local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then
       echo "Symlinked..."
@@ -84,16 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-UIDevice-Utils_Tests/UIDevice_Utils.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Expecta.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Expecta_Snapshots.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/FBSnapshotTestCase.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Specta.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UIDevice-Utils/UIDevice_Utils.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Expecta/Expecta.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Expecta+Snapshots/Expecta_Snapshots.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FBSnapshotTestCase/FBSnapshotTestCase.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Specta/Specta.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-UIDevice-Utils_Tests/UIDevice_Utils.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Expecta.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Expecta_Snapshots.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/FBSnapshotTestCase.framework"
-  install_framework "Pods-UIDevice-Utils_Tests/Specta.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UIDevice-Utils/UIDevice_Utils.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Expecta/Expecta.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Expecta+Snapshots/Expecta_Snapshots.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FBSnapshotTestCase/FBSnapshotTestCase.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Specta/Specta.framework"
 fi

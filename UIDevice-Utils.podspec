@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "UIDevice-Utils"
-s.version          = "0.1.4"
+s.version          = "0.1.5"
 s.summary          = "Category on UIDevice to distinguish between platforms."
 s.description      = "Category to easy distinguish devices, family platform device, or device inches. Provide human-readable device names e.g. 'iPhone 6S Plus' or enums e.g. 'UIDeviceGenerationModeliPhone6SPlus'"
 s.homepage         = "https://github.com/giuseppenucifora/UIDevice-Utils"
@@ -22,11 +22,5 @@ s.platform     = :ios, '8.0'
 s.requires_arc = true
 
 s.source_files = 'Pod/Classes/**/*'
-s.resource_bundles = {
-'UIDevice-Utils' => ['Pod/Assets/*.png']
-}
 
-# s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
 end
