@@ -1,6 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/UIDevice-Utils"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/UIDevice_Utils.framework/Headers"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/UIDevice-Utils/UIDevice_Utils.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "UIDevice_Utils"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-UIDevice-Utils_Example
 PODS_ROOT = ${SRCROOT}/Pods
