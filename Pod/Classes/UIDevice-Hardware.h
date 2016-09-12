@@ -116,4 +116,9 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelInches) {
  */
 - (UIDeviceModelInches) deviceInches;
 
+/**
+ Returns the device OS Version in CGFloat
+ */
+- (CGFloat) osVersion;
+
 @end

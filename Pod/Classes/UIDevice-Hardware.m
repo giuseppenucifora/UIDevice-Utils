@@ -391,5 +391,9 @@
     return UIDeviceModelInchesUnKnown;
 }
 
+- (CGFloat) osVersion {
+    return (CGFloat)[[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
 
 @end
