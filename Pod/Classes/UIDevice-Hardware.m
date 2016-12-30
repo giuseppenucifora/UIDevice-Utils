@@ -391,5 +391,24 @@
     return UIDeviceModelInchesUnKnown;
 }
 
+- (CGFloat) osVersion {
+    
+    return [[self systemVersion] floatValue];
+}
+
+- (CGFloat) getDeviceHeight {
+    
+    CGRect viewSize = [[UIScreen mainScreen] bounds];
+
+    return viewSize.size.height;
+}
+
+- (CGFloat) getDeviceWidth {
+    
+    CGRect viewSize = [[UIScreen mainScreen] bounds];
+
+    return viewSize.size.width;
+}
+
 
 @end
