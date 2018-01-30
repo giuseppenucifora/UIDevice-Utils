@@ -286,6 +286,10 @@
             return UIDeviceModelInches55;
         }
             break;
+        case UIDeviceGenerationModeliPhoneX:{
+            return UIDeviceModelInches58;
+        }
+            break;
         case UIDeviceGenerationModeliPad1:
         case UIDeviceGenerationModeliPad2:
         case UIDeviceGenerationModeliPad3:
