@@ -1,11 +1,3 @@
-/*
- Erica Sadun, http://ericasadun.com
- iPhone Developer's Cookbook, 6.x Edition
- BSD License, Use at your own risk
- 
- Modified by Eric Horacek for Monospace Ltd. on 2/4/13
- */
-
 #import <UIKit/UIKit.h>
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
@@ -26,6 +18,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
 };
 
 typedef NS_ENUM(NSUInteger, UIDeviceGenerationModel) {
+    UIDeviceGenerationModeliPhone1G,
     UIDeviceGenerationModeliPhone3G,
     UIDeviceGenerationModeliPhone3GS,
     UIDeviceGenerationModeliPhone4,
@@ -37,18 +30,27 @@ typedef NS_ENUM(NSUInteger, UIDeviceGenerationModel) {
     UIDeviceGenerationModeliPhone6Plus,
     UIDeviceGenerationModeliPhone6S,
     UIDeviceGenerationModeliPhone6SPlus,
+    UIDeviceGenerationModeliPhoneSE,
+    UIDeviceGenerationModeliPhone7,
+    UIDeviceGenerationModeliPhone7Plus,
+    UIDeviceGenerationModeliPhone8,
+    UIDeviceGenerationModeliPhone8Plus,
+    UIDeviceGenerationModeliPhoneX,
     UIDeviceGenerationModeliPhoneSimulator,
     UIDeviceGenerationModeliPad1,
     UIDeviceGenerationModeliPad2,
     UIDeviceGenerationModeliPad3,
     UIDeviceGenerationModeliPad4,
+    UIDeviceGenerationModeliPad5,
     UIDeviceGenerationModeliPadAir,
     UIDeviceGenerationModeliPadAir2,
     UIDeviceGenerationModeliPadMini1,
     UIDeviceGenerationModeliPadMini2,
     UIDeviceGenerationModeliPadMini3,
     UIDeviceGenerationModeliPadMini4,
-    UIDeviceGenerationModeliPadPro,
+    UIDeviceGenerationModeliPadPro97,
+    UIDeviceGenerationModeliPadPro105,
+    UIDeviceGenerationModeliPadPro12,
     UIDeviceGenerationModeliPadSimulator,
     UIDeviceGenerationModeliPod1,
     UIDeviceGenerationModeliPod2,
@@ -72,6 +74,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelInches) {
     UIDeviceModelInches55,
     UIDeviceModelInches79,
     UIDeviceModelInches97,
+    UIDeviceModelInches105,
     UIDeviceModelInches129,
     UIDeviceSimulatorModelInches35 = UIDeviceModelInches35,
     UIDeviceSimulatorModelInches4 = UIDeviceModelInches4,
@@ -79,6 +82,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelInches) {
     UIDeviceSimulatorModelInches55 = UIDeviceModelInches55,
     UIDeviceSimulatorModelInches79 = UIDeviceModelInches79,
     UIDeviceSimulatorModelInches97 = UIDeviceModelInches97,
+    UIDeviceSimulatorModelInches105 = UIDeviceModelInches105,
     UIDeviceSimulatorModelInches129 = UIDeviceModelInches129,
     UIDeviceModelInchesUnKnown
 };
@@ -90,11 +94,6 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelInches) {
  Returns a machine-readable model name in the format of "iPhone4,1"
  */
 - (NSString *)modelIdentifier;
-
-/**
- Returns a human-readable model name in the format of "iPhone 4S". Fallback of the the `modelIdentifier` value.
- */
-- (NSString *)modelName;
 
 /**
  Returns the device generation model as a `UIDeviceGenerationModel`

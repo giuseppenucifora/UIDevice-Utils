@@ -1,15 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
+platform :ios, '8.0'
 
 target 'UIDevice-Utils_Example' do
     pod "UIDevice-Utils", :path => "../"
-end
-
-target 'UIDevice-Utils_Tests' do
-    pod "UIDevice-Utils", :path => "../"
-    
-    pod 'Specta'
-    pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
 end
