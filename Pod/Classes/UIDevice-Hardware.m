@@ -338,6 +338,11 @@
                     return UIDeviceSimulatorModelInches55;
                     break;
                 }
+                case 812:{
+                    return UIDeviceSimulatorModelInches58;
+                    break;
+                }
+                    break;
                 case 1024:{
                     return UIDeviceModelInches97;
                     break;
