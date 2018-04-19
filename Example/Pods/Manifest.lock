@@ -1,16 +1,16 @@
 PODS:
-  - UIDevice-Utils (1.0.7)
+  - UIDevice-Utils (1.0.8)
 
 DEPENDENCIES:
   - UIDevice-Utils (from `../`)
 
 EXTERNAL SOURCES:
   UIDevice-Utils:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  UIDevice-Utils: 3abac0b73a453f13e658bd8054d44f8b7a9a821d
+  UIDevice-Utils: a420661f05caed425573a99866f79c79f625ec56
 
 PODFILE CHECKSUM: 29850ff9a3324af2d39c0303e01cd7bcbab47fb5
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
