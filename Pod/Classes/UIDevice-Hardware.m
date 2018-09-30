@@ -72,6 +72,10 @@
     if ([modelIdentifier isEqualToString:@"iPhone10,4"])   return UIDeviceGenerationModeliPhone8;
     if ([modelIdentifier isEqualToString:@"iPhone10,5"])   return UIDeviceGenerationModeliPhone8Plus;
     if ([modelIdentifier isEqualToString:@"iPhone10,6"])   return UIDeviceGenerationModeliPhoneX;
+    if ([modelIdentifier isEqualToString:@"iPhone11,2"])   return UIDeviceGenerationModeliPhoneXS;
+    if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return UIDeviceGenerationModeliPhoneXSMax;
+    if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return UIDeviceGenerationModeliPhoneXSMax;
+    if ([modelIdentifier isEqualToString:@"iPhone11,8"])   return UIDeviceGenerationModeliPhoneXR;
     
     // iPad http://theiphonewiki.com/wiki/IPad
     
@@ -182,6 +186,11 @@
     if ([modelIdentifier isEqualToString:@"iPhone10,4"])   return @"iPhone 8";          // AT&T, Global
     if ([modelIdentifier isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";     // AT&T, Global
     if ([modelIdentifier isEqualToString:@"iPhone10,6"])   return @"iPhone X";          // AT&T, Global
+    if ([modelIdentifier isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
+    if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return @"iPhone XSMax";
+    if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return @"iPhone XSMax";
+    if ([modelIdentifier isEqualToString:@"iPhone10,8"])   return @"iPhone XR";
+    
     
     // iPad http://theiphonewiki.com/wiki/IPad
     
@@ -286,8 +295,14 @@
             return UIDeviceModelInches55;
         }
             break;
-        case UIDeviceGenerationModeliPhoneX:{
+        case UIDeviceGenerationModeliPhoneX:
+        case UIDeviceGenerationModeliPhoneXS:
+        case UIDeviceGenerationModeliPhoneXR:{
             return UIDeviceModelInches58;
+        }
+            break;
+        case UIDeviceGenerationModeliPhoneXSMax:{
+            return UIDeviceModelInches65;
         }
             break;
         case UIDeviceGenerationModeliPad1:
@@ -340,6 +355,11 @@
                 }
                 case 812:{
                     return UIDeviceSimulatorModelInches58;
+                    break;
+                }
+                    break;
+                case 896:{
+                    return UIDeviceSimulatorModelInches65;
                     break;
                 }
                     break;
