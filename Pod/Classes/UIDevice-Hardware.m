@@ -142,13 +142,28 @@
     
     if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
-        BOOL iPhoneScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
-        BOOL iPadScreen = !iPhoneScreen;
-        if (iPadScreen) {
-            return UIDeviceGenerationModeliPadSimulator;
-        }
-        else {
-            return UIDeviceGenerationModeliPhoneSimulator;
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        NSInteger screenHeight = ((NSInteger)screenRect.size.height > (NSInteger)screenRect.size.width) ? (NSInteger)screenRect.size.height : (NSInteger)screenRect.size.width;
+        
+        switch (screenHeight) {
+            case 480:
+            case 568:
+            case 667:
+            case 736:
+            case 812:
+            case 896:{
+                return UIDeviceGenerationModeliPhoneSimulator;
+                break;
+            }
+                break;
+            case 1024:
+            case 1366:{
+                return UIDeviceGenerationModeliPadSimulator;
+                break;
+            }
+            default:{
+                break;
+            }
         }
     }
     return UIDeviceGenerationModelUnknown;
@@ -258,8 +273,31 @@
     // Simulator
     if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
-        BOOL smallerScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
-        return (smallerScreen ? @"iPhone Simulator" : @"iPad Simulator");
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        NSInteger screenHeight = ((NSInteger)screenRect.size.height > (NSInteger)screenRect.size.width) ? (NSInteger)screenRect.size.height : (NSInteger)screenRect.size.width;
+        
+        switch (screenHeight) {
+            case 480:
+            case 568:
+            case 667:
+            case 736:
+            case 812:
+            case 896:{
+                return @"iPhone Simulator";
+                break;
+            }
+                break;
+            case 1024:
+            case 1366:{
+                return @"iPad Simulator";
+                break;
+            }
+            default:{
+                return @"";
+                break;
+            }
+        }
     }
     
     return modelIdentifier;

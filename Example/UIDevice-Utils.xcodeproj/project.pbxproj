@@ -274,7 +274,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UIDevice-Utils_Example/Pods-UIDevice-Utils_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-UIDevice-Utils_Example/Pods-UIDevice-Utils_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/UIDevice-Utils/UIDevice_Utils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIDevice-Utils_Example/Pods-UIDevice-Utils_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UIDevice-Utils_Example/Pods-UIDevice-Utils_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B5AB5052D35EE1D56D87225 /* 📦 Check Pods Manifest.lock */ = {
